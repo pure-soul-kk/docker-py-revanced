@@ -4,6 +4,9 @@ env:
   COMPOSE_DOCKER_CLI_BUILD: 1
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - test
   workflow_call:
     secrets:
       ENVS:
@@ -49,93 +52,4 @@ jobs:
         run: |
           echo "${{ secrets.DOCKER_PY_REVANCED_SECRETS }}" >> .env
           echo "Added envs"
-
-      - name: Setup python
-        uses: actions/setup-python@main
-        with:
-          python-version: '3.12.3'
-
-      - name: Install Requirements
-        if: ${{ inputs.PREFERRED_PATCH_APPS }}
-        env:
-          PREFERRED_PATCH_APPS: ${{ inputs.PREFERRED_PATCH_APPS }}
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
-
-      - name: Override Patch apps
-        if: ${{ inputs.PREFERRED_PATCH_APPS }}
-        env:
-          PREFERRED_PATCH_APPS: ${{ inputs.PREFERRED_PATCH_APPS }}
-        run: |
-          python -m scripts.prefered_apps
-
-      - name: Inject Reddit Client ID
-        env:
-          REDDIT_CLIENT_ID: ${{ secrets.REDDIT_CLIENT_ID }}
-        if: env.REDDIT_CLIENT_ID != null
-        run: |
-          client_id="${REDDIT_CLIENT_ID}"
-          path="apks/options.json"
-          json_data=$(cat "${path}")
-
-          new_object='{
-          "patchName": "Spoof client",
-          "options": [
-            {
-              "key": "client-id",
-              "value": "'${client_id}'"
-            }
-          ]
-          }'
-          # Check if an object with the patchName "Spoof client" already exists
-          existing_object_index=$(echo "${json_data}" | jq 'map(.patchName) | index("Spoof client")')
-          echo "${existing_object_index}"
-          if [[ ${existing_object_index} != "null" ]]; then
-            echo "Patch entry already exists. Overriding client ID in it."
-            updated_json=$(echo "${json_data}" | jq ".[${existing_object_index}].options[0].value = \"${client_id}\"")
-          else
-            echo "Patch entry doesn't exists. Adding new entry."
-            updated_json=$(echo "${json_data}" | jq ". += [${new_object}]")
-          fi
-          echo "${updated_json}" > "${path}"
-
-
-      - name: Setup tmate session
-        uses: mxschmitt/action-tmate@master
-        if: ${{ github.event_name == 'workflow_dispatch' && inputs.DEBUG_ENABLED }}
-        with:
-          detached: true
-
-      - name: Build Revanced APKs
-        if: ${{ true && !inputs.DEBUG_ENABLED }}
-        run: |
-          if [[ "${{ inputs.CI_TEST }}" =~ ^(true|True|1)$ ]]; then
-              echo "In CI Testing. Using local compose file."
-              docker compose -f docker-compose-local.yml up --build
-          else
-              echo "Using Prod compose file."
-              docker compose up --build
-          fi
-      - name: Upload Build APKS
-        uses: actions/upload-artifact@main
-        if: ${{ true && !inputs.DEBUG_ENABLED }}
-        with:
-          name: Built-APKs
-          path: |
-            changelog.md
-            changelog.json
-            updates.json
-            apks/*-output.apk
-            apks/VancedMicroG.apk"
-          if-no-files-found: error
-
-      - name: Commit Update file
-        if: ${{ inputs.COMMIT_CHANGELOG && !inputs.CI_TEST}}
-        uses: stefanzweifel/git-auto-commit-action@master
-        with:
-          branch: changelogs
-          skip_checkout: true
-          file_pattern: 'changelog.md changelog.json updates.json'
-          commit_message: 🚀New Build
-          push_options: '--force'
+          echo "${{ secrets.DOCKER_PY_REVANCED_SECRETS }}"
