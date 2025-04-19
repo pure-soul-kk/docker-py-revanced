@@ -47,7 +47,8 @@ jobs:
 
       - name: Update Env from secrets for custom build
         run: |
-          echo "${{ secrets.SECRETS }}" >> .env
+          echo "${{ secrets.DOCKER_PY_REVANCED_SECRETS }}" >> .env
+          echo "Added envs"
 
       - name: Setup python
         uses: actions/setup-python@main
