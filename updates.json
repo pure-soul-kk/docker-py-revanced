@@ -1,1 +1,176 @@
-{}
+{
+    "PHOTOS": {
+        "app_version": "7.35.0.774533729..50313110",
+        "patches_version": "v5.29.0",
+        "cli_version": "v5.0.1",
+        "ms_epoch_since_patched": 1750945978072,
+        "date_patched": "2025-06-26 13:52:58.072543+05:30",
+        "app_dump": {
+            "app_name": "PHOTOS",
+            "app_version": "7.35.0.774533729..50313110",
+            "experiment": false,
+            "cli_dl": "https://github.com/inotia00/revanced-cli/releases/latest",
+            "patches_dl_list": [
+                "https://github.com/ReVanced/revanced-patches/releases/latest"
+            ],
+            "patches_dl": "https://github.com/ReVanced/revanced-patches/releases/latest",
+            "exclude_request": [],
+            "include_request": [],
+            "resource": {
+                "cli": {
+                    "file_name": "0d2a23fb9ef1e59c91f16f35dac65a9b5f7032dae471da0de6dd23b57b3b2f0a.jar",
+                    "version": "v5.0.1"
+                },
+                "patches": {
+                    "file_name": "83404fda2f04c3fa6e73a71eb3e03a3186909136e0ec367877a7521b5c565576.rvp",
+                    "version": "v5.29.0"
+                }
+            },
+            "patch_bundles": [
+                {
+                    "name": "patches",
+                    "file_name": "83404fda2f04c3fa6e73a71eb3e03a3186909136e0ec367877a7521b5c565576.rvp",
+                    "version": "v5.29.0"
+                }
+            ],
+            "no_of_patches": 0,
+            "keystore_name": "revanced.keystore",
+            "archs_to_build": [],
+            "options_file": "options.json",
+            "download_file_name": "PHOTOS.apk",
+            "download_dl": "https://www.apkmirror.com/wp-content/themes/APKMirror/download.php?id=9778252&key=8810fb6568d9be60060e898b9624dfce77f43f5c&forcebaseapk=true",
+            "download_source": "https://www.apkmirror.com/apk/google-inc/photos/",
+            "package_name": "com.google.gallery",
+            "old_key": true,
+            "patches": [],
+            "space_formatted": true
+        }
+    },
+    "YOUTUBE_ANDEA": {
+        "app_version": "20.22.36..1554900416",
+        "patches_version": "v3.9.0",
+        "cli_version": "v5.0.1",
+        "ms_epoch_since_patched": 1749229317270,
+        "date_patched": "2025-06-06 17:01:57.270324+05:30",
+        "app_dump": {
+            "app_name": "YOUTUBE_ANDEA",
+            "app_version": "20.22.36..1554900416",
+            "experiment": false,
+            "cli_dl": "https://github.com/inotia00/revanced-cli/releases/latest",
+            "patches_dl": "https://github.com/anddea/revanced-patches/releases/latest",
+            "exclude_request": [
+                "custom-branding-icon-youtube",
+                "custom-branding-name-youtube",
+                "enable-debug-logging",
+                "hide-fullscreen-button",
+                "custom-branding-icon-for-youtube",
+                "custom-branding-name-for-youtube"
+            ],
+            "include_request": [],
+            "resource": {
+                "cli": {
+                    "file_name": "0d2a23fb9ef1e59c91f16f35dac65a9b5f7032dae471da0de6dd23b57b3b2f0a.jar",
+                    "version": "v5.0.1"
+                },
+                "patches": {
+                    "file_name": "9288e95addfe7e608645aa2f5b2fa4d7c6f40af96dd89ab87d250e17cac5fe24.rvp",
+                    "version": "v3.9.0"
+                }
+            },
+            "no_of_patches": 0,
+            "keystore_name": "revanced.keystore",
+            "archs_to_build": [],
+            "options_file": "options.json",
+            "download_file_name": "YOUTUBE_ANDEA.apk",
+            "download_dl": "https://www.apkmirror.com/wp-content/themes/APKMirror/download.php?id=9554275&key=d810c12a5fb6025564e28ef64e050a15f9a95663&forcebaseapk=true",
+            "download_source": "https://www.apkmirror.com/apk/google-inc/youtube/",
+            "package_name": "com.google.android.youtube.krishna",
+            "old_key": true,
+            "patches": [],
+            "space_formatted": true
+        }
+    },
+    "YOUTUBE_MUSIC_ANDEA": {
+        "app_version": "8.22.52..82252240",
+        "patches_version": "v3.9.0",
+        "cli_version": "v5.0.1",
+        "ms_epoch_since_patched": 1749229372383,
+        "date_patched": "2025-06-06 17:02:52.383129+05:30",
+        "app_dump": {
+            "app_name": "YOUTUBE_MUSIC_ANDEA",
+            "app_version": "8.22.52..82252240",
+            "experiment": false,
+            "cli_dl": "https://github.com/inotia00/revanced-cli/releases/latest",
+            "patches_dl": "https://github.com/anddea/revanced-patches/releases/latest",
+            "exclude_request": [
+                "custom-branding-icon-youtube-music",
+                "custom-branding-name-youtube-music",
+                "enable-compact-dialog",
+                "enable-debug-logging",
+                "enable-old-player-layout",
+                "custom-branding-icon-for-youtube-music",
+                "custom-branding-name-for-youtube-music",
+                "custom-header-for-youtube-music"
+            ],
+            "include_request": [],
+            "resource": {
+                "cli": {
+                    "file_name": "0d2a23fb9ef1e59c91f16f35dac65a9b5f7032dae471da0de6dd23b57b3b2f0a.jar",
+                    "version": "v5.0.1"
+                },
+                "patches": {
+                    "file_name": "9288e95addfe7e608645aa2f5b2fa4d7c6f40af96dd89ab87d250e17cac5fe24.rvp",
+                    "version": "v3.9.0"
+                }
+            },
+            "no_of_patches": 0,
+            "keystore_name": "revanced.keystore",
+            "archs_to_build": [],
+            "options_file": "options.json",
+            "download_file_name": "YOUTUBE_MUSIC_ANDEA.apk",
+            "download_dl": "https://www.apkmirror.com/wp-content/themes/APKMirror/download.php?id=9533356&key=b2337cfa6b2ea7f59f975d3778479f4d5347880e&forcebaseapk=true",
+            "download_source": "https://www.apkmirror.com/apk/google-inc/youtube-music/",
+            "package_name": "com.hiby.music",
+            "old_key": true,
+            "patches": [],
+            "space_formatted": true
+        }
+    },
+    "SPOTIFY": {
+        "app_version": "latest",
+        "patches_version": "v3.9.0",
+        "cli_version": "v5.0.1",
+        "ms_epoch_since_patched": 1749229295687,
+        "date_patched": "2025-06-06 17:01:35.687438+05:30",
+        "app_dump": {
+            "app_name": "SPOTIFY",
+            "app_version": "latest",
+            "experiment": false,
+            "cli_dl": "https://github.com/inotia00/revanced-cli/releases/latest",
+            "patches_dl": "https://github.com/anddea/revanced-patches/releases/latest",
+            "exclude_request": [],
+            "include_request": [],
+            "resource": {
+                "cli": {
+                    "file_name": "0d2a23fb9ef1e59c91f16f35dac65a9b5f7032dae471da0de6dd23b57b3b2f0a.jar",
+                    "version": "v5.0.1"
+                },
+                "patches": {
+                    "file_name": "9288e95addfe7e608645aa2f5b2fa4d7c6f40af96dd89ab87d250e17cac5fe24.rvp",
+                    "version": "v3.9.0"
+                }
+            },
+            "no_of_patches": 7,
+            "keystore_name": "revanced.keystore",
+            "archs_to_build": [],
+            "options_file": "options.json",
+            "download_file_name": "SPOTIFY.apk",
+            "download_dl": "https://dw.uptodown.com/dwn/RvVkii134Riphftvun7hQBZyU0aCwJjJMFI3FD3XyiTKTeKOsUKxYyxj4GUGD2nmV78BPsILTTkC_OIfjNCiuPQbbQY7zCl-ncvzPeBQykQcxNTiMHVpOKvm32H0Sn8E/XM_B_A14nwNnv6fyQ9DqJs3uB-H2gTIeqP0OEIHEuwoKYaOjFXccQcwdZe3A4vU987hAsR2xzm9Oj-ggHC1_leF1kYRggulfUxAoWDXKjCp2WPuFKfw7Pp5bzNz27ioD/7SVwcwjbP6J5EjcBR585lyQuA28aRMNlnZsvsiymNZoL4b3qtA4GwNJ219QUfU59OEte7NugobQEHtTQf6KhX636PfuixaNJ0xzQfIgOK9U=/",
+            "download_source": "https://spotify.en.uptodown.com/android",
+            "package_name": "com.spotify.music",
+            "old_key": true,
+            "patches": [],
+            "space_formatted": true
+        }
+    }
+}
